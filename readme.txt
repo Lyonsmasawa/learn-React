@@ -27,6 +27,7 @@ n/b
 
 
                                       - - - - - - - - COMPONENTS - - - - - - - - 
+                                just a function that returns a jsx template and it is exported at the bottom of the file
 
         Components - building blocks and beating heart of every react application
         - a typical react app is made up of several components where each component is a self contained component,
