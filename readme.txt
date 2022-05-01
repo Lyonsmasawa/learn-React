@@ -24,3 +24,23 @@ n/b
 
 // create node_modules - when you have none in a react project from somewhere because node_modules is to big it is not uploaded to github
 - npm install - looks through package.json and installs all dependencies
+
+
+                                      - - - - - - - - COMPONENTS - - - - - - - - 
+
+        Components - building blocks and beating heart of every react application
+        - a typical react app is made up of several components where each component is a self contained component,
+        as developers we create components which are rendered to the DOM and shown in webPage by React.
+        - 
+                component tree
+                ROOT COMPONENT - App.js - the rest are nested inside this root component e.g Navbar.js
+
+        - components contain - Template(html) and logic(js)
+
+                        ------ JSX templates -----
+
+        - allows us to easily create these html styled templates and components and in the background a transpiler called babel converts this to html  
+        - function has to start with a capital Letter
+        - as we add classes to html elements using class we add classes to JSX using className -camelCase - THEN when converted to html it translates to class
+        - we can output dynamic values/variables
+        - react converts WHATEVER DATATYPE WE USE TO A STRING, the only thing we cant output are objects and booleans
