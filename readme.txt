@@ -4,6 +4,9 @@ React is a Javascript library used to crease interactive websites
 & manages the whole website in the browser i.e. routing, data, interactivity without any input from the server to mean
 our pages load faster
 
+INSTALL SIMPLE REACT SNIPPETS FOR AN EASY TIME
+        -sfc - creates a stateless functional component
+
 create an app
 - easiest it to use a command line tool - create react app -generates a start app with all needed setup instead of doing it ourselves - need {node} for this
         -npx create-react-app name
