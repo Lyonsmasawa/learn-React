@@ -27,7 +27,7 @@ const Home = () => {
             {/* <button onClick={handleClick}>Click me</button>  */}
             {/* every event has events objects automatically which we can use for man things, passed as "e" */}
             {/* <button onClick={() => {handleClickAgain(name)}}>Click me again</button> */}
-            <BlogList blogs={blogs}/> 
+            <BlogList blogs={blogs} title="All Blogs!"/> 
         </div>
      );
 }
