@@ -71,6 +71,7 @@ n/b
 
         *** making a custom hook ***
         make its file - must state with use
+        // uses objects instead of arrays because you don't have to follow the order
 
 
         Props
