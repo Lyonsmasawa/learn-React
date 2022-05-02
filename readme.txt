@@ -78,3 +78,17 @@ n/b
         - when reusing components we can use props to pass data from one component to another(parent component to child component)
                 - it makes our components reusable
         - ***we shouldn't edit the data in props***
+
+        React router
+        we send request to the server once and the server responds to that by sending back the html and our compiled react javascript files
+        so the html page we get back is virtually empty and then react injects dynamically the components,
+        react intercepts request to the server and injects the required component, makes it faster
+
+        - install react router - npm install react-router-dom
+        - import router - nest component inside router to allow them to have access to the router
+        - router links -  {/* "Links prevents request to server and injects the content we need" */}
+
+        useEffect cleanup
+        when we place another component while another state is still not done updating it gives an error on the console cause its unnmounted
+        - we can stop fetch from carrying on when a component is unmounted 
+                - use an abort controller

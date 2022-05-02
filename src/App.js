@@ -1,6 +1,8 @@
 import './App.css';
 import Navbar from './Navbar';
 import Home from './Home';
+import { BrowserRouter as Router, Route, Routes } from  'react-router-dom';
+import Create from './create';
 
 
 function App() {
@@ -9,10 +11,14 @@ function App() {
   // const link = "http://google.com"
   
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
       <Navbar/>
       <div className="content">
-        <Home></Home>
+        <Routes>  "ensures only one component renders"
+          <Route exact path="/" element={<Home/>}/>
+          <Route path="/create" element={<Create/>}/>
+        </Routes>
         {/* <h1>{ title }</h1>
         <p>Liked: { likes } times</p>
         <p>{ 10 }</p>
@@ -23,6 +29,7 @@ function App() {
         <a href={link} >GoogleSite</a> */}
       </div>
     </div>
+    </Router>
   );
 }
 
