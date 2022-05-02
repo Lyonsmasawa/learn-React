@@ -14,22 +14,24 @@ const Home = () => {
     // const handleClickAgain = (name) => {
     //     console.log("hello " + name);
     // }
-    const [blogs, setBlogs] = useState([
-        { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
-        { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
-        { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
-    ])
+    const [blogs, setBlogs] = useState(null);
+    const [isPending, setIsPending] = useState(true);
 
-    const [name, setName] = useState("Mario")
-
-    const handleDelete = (id) => {
-        const newBlogs = blogs.filter(blogs => blogs.id !== id);
-        setBlogs(newBlogs);
-    }
+    // const handleDelete = (id) => {
+    //     const newBlogs = blogs.filter(blogs => blogs.id !== id);
+    //     setBlogs(newBlogs);
+    // }
 
     useEffect(() => {
-        console.log('use effect ran')
-    }, [name]);
+        fetch('http://localhost:8000/blogs')
+            .then(res => {
+               return res.json() //passes the json into a javascript object for us
+            })
+            .then(data => {
+                console.log(data);
+                setBlogs(data)
+            })
+    }, []);
 
     return ( 
         <div className="home">
@@ -38,9 +40,7 @@ const Home = () => {
             {/* <button onClick={handleClick}>Click me</button>  */}
             {/* every event has events objects automatically which we can use for man things, passed as "e" */}
             {/* <button onClick={() => {handleClickAgain(name)}}>Click me again</button> */}
-            <BlogList blogs={blogs} title="All Blogs!" handleDelete={handleDelete} /> 
-            <button onClick={() => setName("Lyons")}>Click me</button>
-            <p>{name}</p>
+                {blogs && <BlogList blogs={blogs} title="All Blogs!"/> }
             {/* <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} title="Mario's Blogs!"/>  */}
         </div>
      );

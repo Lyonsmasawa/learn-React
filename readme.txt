@@ -63,7 +63,10 @@ n/b
                         - empty [] makes it run only once at the beginning
 
                 - use it to fetch data
-                
+                JSON - ENDPOINTS
+                - GET
+                - POST
+                - DELETE
 
         Props
         - when reusing components we can use props to pass data from one component to another(parent component to child component)

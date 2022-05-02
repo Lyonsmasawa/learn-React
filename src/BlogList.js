@@ -1,4 +1,4 @@
-const BlogList = ({blogs, title, handleDelete}) => {
+const BlogList = ({blogs, title}) => {
     // u can pass (props) or just destructure them right there
     // const blogs = props.blogs
     // console.log(props, blogs)
@@ -11,7 +11,7 @@ const BlogList = ({blogs, title, handleDelete}) => {
                 {/* key property is used to keep track of each item it outputs, must be unique and must be there */}
                 <h2>{ blog.title }</h2>
                 <p>Written by { blog.author }</p>
-                <button onClick={() => handleDelete(blog.id)}>delete blog</button>
+                {/* <button onClick={() => handleDelete(blog.id)}>delete blog</button> */}
                 </div>
             ))}
         </div>
