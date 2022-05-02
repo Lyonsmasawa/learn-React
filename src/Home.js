@@ -36,7 +36,7 @@ const Home = () => {
                         setBlogs(data)
                         setIsPending(false)
                     })
-            }, 1000);
+            }, 1000); //just to simulate loading
         }, []);
 
         return (
