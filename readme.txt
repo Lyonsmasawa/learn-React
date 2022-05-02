@@ -69,6 +69,10 @@ n/b
                 - POST
                 - DELETE
 
+        *** making a custom hook ***
+        make its file - must state with use
+
+
         Props
         - when reusing components we can use props to pass data from one component to another(parent component to child component)
                 - it makes our components reusable

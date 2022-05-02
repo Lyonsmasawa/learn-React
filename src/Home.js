@@ -3,6 +3,7 @@ import {
     useEffect
 } from "react";
 import BlogList from "./BlogList";
+import useFetch from "./useFetch";
 
 const Home = () => {
         // let name = 'Lyons';
@@ -17,38 +18,13 @@ const Home = () => {
         // const handleClickAgain = (name) => {
         //     console.log("hello " + name);
         // }
-        const [blogs, setBlogs] = useState(null);
-        const [isPending, setIsPending] = useState(true);
-        const [error, setError] = useState(null)
 
         // const handleDelete = (id) => {
         //     const newBlogs = blogs.filter(blogs => blogs.id !== id);
         //     setBlogs(newBlogs);
         // }
-
-        useEffect(() => {
-            setTimeout(() => {
-                fetch('http://localhost:8000/blogs')
-                    .then(res => {
-                        // console.log(res)
-                        if (!res.ok) {
-                            throw Error("could not fetch the data for that resource");
-                        }
-                        return res.json() //passes the json into a javascript object for us
-                    })
-                    .then(data => {
-                        console.log(data);
-                        setBlogs(data)
-                        setIsPending(false)
-                        setError(null)
-                    })
-                    .catch(err => {
-                        setError(err.message)
-                        setIsPending(false)
-                        console.log(err.message)
-                    })
-            }, 1000); //just to simulate loading
-        }, []);
+        const {data: blogs, isPending, error} = useFetch('http://localhost:8000/blogs')
+        
 
         return (
             <div className = "home" > {
