@@ -52,3 +52,7 @@ n/b
         State (useState hook)
         - when we talk about state of a component we just mean the data being used in that component at that time
         - we use hook to make a reactive value (we pass in an initial value and we use the setName to set it to another value)
+
+        Props
+        - when reusing components we can use props to pass data from one component to another(parent component to child component)
+                - it makes our components reusable

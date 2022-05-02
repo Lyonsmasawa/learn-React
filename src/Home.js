@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BlogList from "./BlogList";
 
 const Home = () => {
     // let name = 'Lyons';
@@ -12,13 +13,12 @@ const Home = () => {
 
     // const handleClickAgain = (name) => {
     //     console.log("hello " + name);
-    // } 
+    // }
     const [blogs, setBlogs] = useState([
         { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
         { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
         { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
     ])
-
 
     return ( 
         <div className="home">
@@ -27,13 +27,7 @@ const Home = () => {
             {/* <button onClick={handleClick}>Click me</button>  */}
             {/* every event has events objects automatically which we can use for man things, passed as "e" */}
             {/* <button onClick={() => {handleClickAgain(name)}}>Click me again</button> */}
-            {blogs.map((blog) => (
-                <div className="blog-preview" key={blog.id}> 
-                {/* key property is used to keep track of each item it outputs, must be unique and must be there */}
-                <h2>{ blog.title }</h2>
-                <p>Written by { blog.author }</p>
-                </div>
-            ))}
+            <BlogList blogs={blogs}/> 
         </div>
      );
 }
