@@ -20,6 +20,10 @@ const Home = () => {
         { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
     ])
 
+    const handleDelete = (id) => {
+        
+    }
+
     return ( 
         <div className="home">
             {/* <h2>Homepage</h2>  */}
@@ -27,7 +31,8 @@ const Home = () => {
             {/* <button onClick={handleClick}>Click me</button>  */}
             {/* every event has events objects automatically which we can use for man things, passed as "e" */}
             {/* <button onClick={() => {handleClickAgain(name)}}>Click me again</button> */}
-            <BlogList blogs={blogs} title="All Blogs!"/> 
+            <BlogList blogs={blogs} title="All Blogs!" handleDelete={handleDelete()} /> 
+            {/* <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} title="Mario's Blogs!"/>  */}
         </div>
      );
 }

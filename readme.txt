@@ -56,3 +56,4 @@ n/b
         Props
         - when reusing components we can use props to pass data from one component to another(parent component to child component)
                 - it makes our components reusable
+        - ***we shouldn't edit the data in props***
