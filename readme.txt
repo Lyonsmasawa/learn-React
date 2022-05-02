@@ -49,9 +49,18 @@ n/b
         - we can output dynamic values/variables
         - react converts WHATEVER DATATYPE WE USE TO A STRING, the only thing we cant output are objects and booleans
 
+                        - - - - - HOOKS - - - - -
+                        several:
         State (useState hook)
         - when we talk about state of a component we just mean the data being used in that component at that time
         - we use hook to make a reactive value (we pass in an initial value and we use the setName to set it to another value)
+
+        useEffect()
+        - runs a function every render of a component, this happens the first time and also when state changes
+        - beware of changing a state in useEffect cause it could end up in a loop
+         - dependencies :
+                - if you don't want to run it after each and every render we use a dependency array
+                        - empty [] makes it run only ones at the beginning
 
         Props
         - when reusing components we can use props to pass data from one component to another(parent component to child component)
