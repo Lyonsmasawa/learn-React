@@ -96,5 +96,8 @@ n/b
         useParams hook
         - grab parameters from the route
 
+        useNavigate hook
+        - redirect
+
         controlled inputs
         - way to set up input fields and to track their values and update accordingly
