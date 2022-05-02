@@ -55,7 +55,7 @@ const Create = () => {
                   {isPending && <button disabled>Adding blog...</button>}
             </form>
         </div>
-     );
+    );
 }
  
 export default Create;
