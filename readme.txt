@@ -48,3 +48,6 @@ n/b
         - as we add classes to html elements using class we add classes to JSX using className -camelCase - THEN when converted to html it translates to class
         - we can output dynamic values/variables
         - react converts WHATEVER DATATYPE WE USE TO A STRING, the only thing we cant output are objects and booleans
+
+        State (useState hook)
+        - when we talk about state of a component we just mean the data being used in that component at that time
