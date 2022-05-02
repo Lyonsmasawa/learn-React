@@ -51,3 +51,4 @@ n/b
 
         State (useState hook)
         - when we talk about state of a component we just mean the data being used in that component at that time
+        - we use hook to make a reactive value (we pass in an initial value and we use the setName to set it to another value)
