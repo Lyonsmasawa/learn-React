@@ -28,7 +28,7 @@ const Home = () => {
 
         useEffect(() => {
             setTimeout(() => {
-                fetch('http://localhost:8000/blogss')
+                fetch('http://localhost:8000/blogs')
                     .then(res => {
                         // console.log(res)
                         if (!res.ok) {
@@ -40,9 +40,11 @@ const Home = () => {
                         console.log(data);
                         setBlogs(data)
                         setIsPending(false)
+                        setError(null)
                     })
                     .catch(err => {
                         setError(err.message)
+                        setIsPending(false)
                         console.log(err.message)
                     })
             }, 1000); //just to simulate loading
