@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Home from './Home';
 import { BrowserRouter as Router, Route, Routes } from  'react-router-dom';
 import Create from './create';
+import BlogDetails from './BlogDetails';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Routes>  "ensures only one component renders"
           <Route exact path="/" element={<Home/>}/>
           <Route path="/create" element={<Create/>}/>
+          <Route path="/blogs/:id" element={<BlogDetails/>}/>
         </Routes>
         {/* <h1>{ title }</h1>
         <p>Liked: { likes } times</p>

@@ -92,3 +92,6 @@ n/b
         when we place another component while another state is still not done updating it gives an error on the console cause its unnmounted
         - we can stop fetch from carrying on when a component is unmounted 
                 - use an abort controller
+
+        useParams hook
+        - grab parameters from the route
