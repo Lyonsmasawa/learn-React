@@ -29,7 +29,7 @@ const Home = () => {
             {/* <button onClick={() => {handleClickAgain(name)}}>Click me again</button> */}
             {blogs.map((blog) => (
                 <div className="blog-preview" key={blog.id}> 
-                {/* key property is used to keep track of each item it outputs */}
+                {/* key property is used to keep track of each item it outputs, must be unique and must be there */}
                 <h2>{ blog.title }</h2>
                 <p>Written by { blog.author }</p>
                 </div>
