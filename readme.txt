@@ -95,3 +95,6 @@ n/b
 
         useParams hook
         - grab parameters from the route
+
+        controlled inputs
+        - way to set up input fields and to track their values and update accordingly
