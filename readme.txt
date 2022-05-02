@@ -63,6 +63,7 @@ n/b
                         - empty [] makes it run only once at the beginning
 
                 - use it to fetch data
+                json host our own server -npx json-server --watch data/db.json --port 8000
                 JSON - ENDPOINTS
                 - GET
                 - POST
