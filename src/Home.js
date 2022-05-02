@@ -19,6 +19,7 @@ const Home = () => {
         // }
         const [blogs, setBlogs] = useState(null);
         const [isPending, setIsPending] = useState(true);
+        const [error, setError] = useState(null)
 
         // const handleDelete = (id) => {
         //     const newBlogs = blogs.filter(blogs => blogs.id !== id);
@@ -27,14 +28,22 @@ const Home = () => {
 
         useEffect(() => {
             setTimeout(() => {
-                fetch('http://localhost:8000/blogs')
+                fetch('http://localhost:8000/blogss')
                     .then(res => {
+                        // console.log(res)
+                        if (!res.ok) {
+                            throw Error("could not fetch the data for that resource");
+                        }
                         return res.json() //passes the json into a javascript object for us
                     })
                     .then(data => {
                         console.log(data);
                         setBlogs(data)
                         setIsPending(false)
+                    })
+                    .catch(err => {
+                        setError(err.message)
+                        console.log(err.message)
                     })
             }, 1000); //just to simulate loading
         }, []);
@@ -46,11 +55,13 @@ const Home = () => {
                 {/* <button onClick={handleClick}>Click me</button>  */ } 
                 {/* every event has events objects automatically which we can use for man things, passed as "e" */ } 
                 {/* <button onClick={() => {handleClickAgain(name)}}>Click me again</button> */ } 
+                { error && <div>{ error }</div>} 
                 {isPending && <div> Loading... </div>} 
                 {blogs && <BlogList blogs = {blogs} title = "All Blogs!" />}
                 {/* <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} title="Mario's Blogs!"/>  */ } 
             </div>
             );
         }
+        // the above rendering is called conditional rendering
 
         export default Home;
