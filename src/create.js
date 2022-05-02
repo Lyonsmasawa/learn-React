@@ -22,7 +22,7 @@ const Create = () => {
         }).then(() => {
             setIsPending(false)
             // navigate.go(-1)
-            navigate.push('/')
+            navigate('/')
         })
        }, 1000);
     }
