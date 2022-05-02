@@ -60,7 +60,10 @@ n/b
         - beware of changing a state in useEffect cause it could end up in a loop
          - dependencies :
                 - if you don't want to run it after each and every render we use a dependency array
-                        - empty [] makes it run only ones at the beginning
+                        - empty [] makes it run only once at the beginning
+
+                - use it to fetch data
+                
 
         Props
         - when reusing components we can use props to pass data from one component to another(parent component to child component)
